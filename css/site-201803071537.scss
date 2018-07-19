@@ -445,7 +445,7 @@ footer ul li {
 }
 
 .button {
-  @include border-radius(15px);
+  @include border-radius(50px);
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
@@ -462,7 +462,7 @@ footer ul li {
 }
 
 .button:hover, .button:focus {
-background-color: #8e2d56;
+  background-color: #8e2d56;
 }
 
 .card {
@@ -578,6 +578,42 @@ background-color: #8e2d56;
 
 .landing-content.row.banner {
   padding: 0px;
+}
+
+.placeholder-blob {
+  width: 15rem;
+  height: 25rem;
+  background-image: linear-gradient(-175deg, #AA0EFF 0%, #EE1DAD 100%);
+  border: 2px solid #AE27AC;
+  border-radius: 400px;
+  margin: auto;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.button.download {
+  background-image: linear-gradient(-175deg, #AA0EFF 0%, #EE1DAD 100%);
+  border: 1px solid #B71EB5;
+  box-shadow: 0 2px 0 0 #AE27AC;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 1.5px 0 rgba(0,0,0,0.05);
+  margin-right: 20px;
+}
+
+.button.read {
+  border: 1px solid #FFFFFF;
+  border-radius: 25px;
+  background: transparent;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 1.5px 0 rgba(0,0,0,0.05);
 }
 
 @media screen and (max-width: 640px) {
