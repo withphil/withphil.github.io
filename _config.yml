@@ -1,0 +1,19 @@
+# Site settings
+title: With Phil!
+email: help@withphil.org
+description: > # this means to ignore newlines until "baseurl:"
+  Donate with confidence to those sleeping rough.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://www.withphil.org" # the base hostname & protocol for your site
+twitter_username: helpwithphil
+github_username:  withphil
+
+# Build settings
+markdown: kramdown
+
+gems: ['kramdown', 'jekyll-redirect-from', 'jekyll-sitemap']
+# , 'jekyll-minifier', 'jekyll-seo-tag']
+
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']
+
+permalink: /community/tutorials/:title.html
