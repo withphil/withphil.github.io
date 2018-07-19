@@ -528,7 +528,7 @@ footer ul li {
   height: 100%;
   top: 0;
   z-index: 10;
-  min-height: 700px;
+  min-height: 800px;
 }
 
 .landing-header {
@@ -590,6 +590,7 @@ footer ul li {
 
 .buttons {
   margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .button.download {
@@ -598,7 +599,6 @@ footer ul li {
   box-shadow: 0 2px 0 0 #AE27AC;
   font-size: 16px;
   color: #FFFFFF;
-  letter-spacing: 2px;
   text-align: center;
   text-shadow: 0 1.5px 0 rgba(0,0,0,0.05);
   margin-right: 20px;
@@ -615,7 +615,37 @@ footer ul li {
   text-shadow: 0 1.5px 0 rgba(0,0,0,0.05);
 }
 
-@media screen and (max-width: 640px) {
+#mc_embed_signup form {
+  // text-align: left!important;
+}
+
+#mc_embed_signup input.email {
+  display: inline-block;
+  width: 350px;
+  margin: auto;
+  height: 45px;
+  border-radius: 50px;
+  background-color: white;
+  border-top-color: rgba(0,0,0,0);
+  padding-left: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#mc_embed_signup .clear {
+  display: inline-block;
+}
+
+#mc_embed_signup .button.download {
+  margin: auto;
+  height: 45px;
+  box-shadow: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-left: -4px;
+}
+
+@media screen and (max-width: 1024px) {
   .landing-page h1 {
     font-size: 44px;
     line-height: 50px;
@@ -623,5 +653,53 @@ footer ul li {
   .landing-page h4 {
     font-size: 24px;
     line-height: 38px;
+  }
+  .landing-page {
+    min-height: 750px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #mc_embed_signup .button.download {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-left: 0px;
+    width: 100%;
+  }
+  #mc_embed_signup .clear {
+    display: block;
+    margin-top: 25px;
+  }
+  #mc_embed_signup input.email {
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .landing-page {
+    min-height: 750px;
+  }
+  .landing-page h1 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  .landing-page h4 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .landing-page {
+    min-height: 630px;
+  }
+  .landing-page h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .landing-page h4 {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
