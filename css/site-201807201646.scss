@@ -232,7 +232,7 @@ p small {
 
 .title-bar {
   background: white;
-  height: 70px;
+  // height: 70px;
 }
 
 .overlay {
@@ -550,22 +550,12 @@ footer ul li {
 }
 
 .landing-header h1 {
-  font-size: 40px;
+  font-size: 100px;
   color: #FFFFFF;
-  letter-spacing: 1.5px;
+  letter-spacing: 6.5px;
   text-shadow: 0 2.5px 0 rgba(0,0,0,0.10);
   margin: 10px;
-  font-family: 'Amatic SC', cursive;
-  font-family: 'Gaegu', cursive;
-  font-family: 'Patrick Hand', cursive;
-  font-family: 'Itim', cursive;
   font-family: 'Just Another Hand', cursive;
-  font-family: 'Nanum Pen Script', cursive;
-  font-family: 'Annie Use Your Telescope', cursive;
-  font-family: 'Schoolbell', cursive;
-  font-family: 'Loved by the King', cursive;
-  font-family: 'Vibur', cursive;
-  font-family: $primary-font;
 }
 
 .landing-page h1 {
@@ -704,6 +694,9 @@ footer ul li {
   .landing-page h4 {
     font-size: 24px;
     line-height: 38px;
+  }
+  .landing-header h1 {
+    font-size: 60px;
   }
 }
 
