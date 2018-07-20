@@ -555,6 +555,17 @@ footer ul li {
   letter-spacing: 1.5px;
   text-shadow: 0 2.5px 0 rgba(0,0,0,0.10);
   margin: 10px;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Gaegu', cursive;
+  font-family: 'Patrick Hand', cursive;
+  font-family: 'Itim', cursive;
+  font-family: 'Just Another Hand', cursive;
+  font-family: 'Nanum Pen Script', cursive;
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-family: 'Schoolbell', cursive;
+  font-family: 'Loved by the King', cursive;
+  font-family: 'Vibur', cursive;
+  font-family: $primary-font;
 }
 
 .landing-page h1 {
@@ -573,6 +584,7 @@ footer ul li {
   transform: translateY(-50%) translateX(-50%);
   z-index: 3;
   width: 100%;
+  margin-top: 30px;
 }
 
 .landing-content.row.banner {
@@ -594,14 +606,16 @@ footer ul li {
 }
 
 .button.download {
-  background-image: linear-gradient(-175deg, #AA0EFF 0%, #EE1DAD 100%);
-  border: 1px solid #B71EB5;
+  // background-image: linear-gradient(-175deg, #AA0EFF 0%, #EE1DAD 100%);
+  // border: 1px solid #B71EB5;
+  background: #EE1DAD;
+  border: 1px solid #EE1DAD;
   box-shadow: 0 2px 0 0 #AE27AC;
   font-size: 16px;
   color: #FFFFFF;
   text-align: center;
   text-shadow: 0 1.5px 0 rgba(0,0,0,0.05);
-  margin-right: 20px;
+  margin-right: 20px
 }
 
 .button.read {
@@ -624,12 +638,13 @@ footer ul li {
   width: 350px;
   margin: auto;
   height: 45px;
-  border-radius: 50px;
+  border-radius: 5px;
   background-color: white;
   border-top-color: rgba(0,0,0,0);
   padding-left: 15px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
+  box-shadow: none;
 }
 
 #mc_embed_signup .clear {
@@ -643,6 +658,8 @@ footer ul li {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   margin-left: -4px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -661,8 +678,8 @@ footer ul li {
 
 @media screen and (max-width: 540px) {
   #mc_embed_signup .button.download {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     margin-left: 0px;
     width: 100%;
   }
@@ -674,8 +691,8 @@ footer ul li {
     display: block;
     width: 100%;
     margin: auto;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
   .landing-page {
     min-height: 750px;
