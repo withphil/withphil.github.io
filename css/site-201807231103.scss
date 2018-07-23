@@ -539,8 +539,10 @@ footer ul li {
 .landing-page h4 {
   font-size: 28px;
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 0.4px;
   line-height: 42px;
+  text-shadow: 0 1.25px 0 rgba(0,0,0,0.1);
+  font-weight: 300;
 }
 
 .landing-header .top-bar,
@@ -605,7 +607,8 @@ footer ul li {
   color: #FFFFFF;
   text-align: center;
   text-shadow: 0 1.5px 0 rgba(0,0,0,0.05);
-  margin-right: 20px
+  margin-right: 20px;
+  letter-spacing: 0.4px;
 }
 
 .button.read {
@@ -630,11 +633,12 @@ footer ul li {
   height: 45px;
   border-radius: 5px;
   background-color: white;
-  border-top-color: rgba(0,0,0,0);
+  border: transparent;
   padding-left: 15px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   box-shadow: none;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
 }
 
 #mc_embed_signup .clear {
@@ -644,12 +648,21 @@ footer ul li {
 #mc_embed_signup .button.download {
   margin: auto;
   height: 45px;
-  box-shadow: none;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   margin-left: -4px;
+  margin-top: -1px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+.phil {
+  font-size: 100px;
+  color: #FFFFFF;
+  letter-spacing: 6.5px;
+  text-shadow: 0 2.5px 0 rgba(0,0,0,0.10);
+  font-family: 'Just Another Hand', cursive;
 }
 
 @media screen and (max-width: 1024px) {
