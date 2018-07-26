@@ -11,6 +11,7 @@ $footer-base-colour: rgb(118, 75, 162);
 $footer-base-font-colour: rgba(255, 255, 255, 0.8);
 $footer-link-hover-colour: rgba(255, 255, 255, 1);
 $footer-title-font-colour: rgba(255, 255, 255, 0.9);
+$header-nav-height: 100px;
 
 @mixin border-radius($radius) {
   border-radius: $radius;
@@ -37,6 +38,14 @@ $footer-title-font-colour: rgba(255, 255, 255, 0.9);
 body, html {
   font-family: $primary-font;
   color: $base-font-colour;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: none;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: $primary-font;
 }
 
 code {
@@ -69,22 +78,34 @@ h1 {
   color: $title-font-colour;
 }
 
-h2, h3, h4, h5, h6 {
+h2 {
+  font-size: 44px;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(0deg, #AA0EFF 0%, #EE1DAD 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3, h4, h5, h6 {
   color: $subtitle-font-colour;
 }
 
-h1, h2 {
-  text-transform: capitalize;
-}
+// h1, h2 {
+//   text-transform: capitalize;
+// }
 
 h1 {
   line-height: 1.2;
 }
 
 p {
-  font-size: 18px;
-  line-height: 32px;
-  font-weight: 100;
+  font-size: 22px;
+  color: #43337E;
+  letter-spacing: 1.32px;
+  line-height: 38px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.10);
+  font-weight: 300;
 }
 
 p small {
@@ -109,11 +130,16 @@ p small {
 
 .row.banner {
   padding-top: 80px;
-  padding-bottom: 10px;
+  padding-bottom: 80px;
+}
+
+.main-body {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .banner img {
-  max-height: 400px;
+  max-height: 240px;
 }
 
 .center-cell {
@@ -147,11 +173,6 @@ p small {
 
 .is-dropdown-submenu li {
   height: 36px;
-}
-
-.top-bar {
-  padding-top: auto;
-  padding-bottom: auto;
 }
 
 .top-bar {
@@ -450,15 +471,14 @@ footer ul li {
   vertical-align: middle;
   margin: 0 0 1rem 0;
   padding: 0.85rem 2rem;
-  -webkit-appearance: none;
-  border: 1px solid transparent;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-size: 0.9rem;
-  line-height: 1;
   text-align: center;
   cursor: pointer;
-  background-color: rgb(102, 126, 234);
-  color: white;
+  border: 1.5px solid #EE1DAD;
+  background-color: white;
+  font-size: 11px;
+  color: #EE1DAD;
+  letter-spacing: 1.38px;
+  font-weight: 500;
 }
 
 .button:hover, .button:focus {
@@ -485,58 +505,20 @@ footer ul li {
   font-family: $primary-font;
 }
 
-.bg-top {
+// withphil
+
+.hero-banner {
   position: relative;
-  /* background: linear-gradient(-225deg, rgba(164, 69, 178, 0.4) 0%, rgba(212, 24, 114, 0.4) 52%, rgba(255, 0, 102, 0.4) 100%), url(/images/pages/photo.jpeg); */
-  background: linear-gradient(160deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%), url(/images/pages/photo.jpeg);
-  height: 550px;
+  background-image: linear-gradient(-30deg, #7700FF 0%, #546BFE 35%, #3CACFF 72%, #81D8FF 100%, #82D9FF 100%);
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  margin-top: -$header-nav-height;
+  padding-top: calc(#{$header-nav-height} + 100px);
+  padding-bottom: calc(#{$header-nav-height} + 100px);
 }
 
-@media screen and (min-height: 800px) and (min-width: 1200px) {
-  .bg-top {
-    padding: 80px 0px;
-  }
-}
-
-.bg-top h1, .bg-top h2, .bg-top h3, .bg-top h4, .bg-top h5, .bg-top h6, .bg-top img, .bg-top a {
-  z-index: 2;
-  position: relative;
-}
-
-.bg-top h1 {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.bg-top h2, .bg-top h3, .bg-top h4, .bg-top h5, .bg-top h6 {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.bg-top p, .bg-top small {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-// withphil
-
-.landing-page {
-  background-image: linear-gradient(-30deg, #7700FF 0%, #546BFE 35%, #3CACFF 72%, #81D8FF 100%, #82D9FF 100%);
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100%;
-  top: 0;
-  z-index: 10;
-  min-height: 800px;
-}
-
-.landing-header {
-  position: relative;
-  z-index: 11;
-}
-
-.landing-page h4 {
+.hero-banner h4 {
   font-size: 28px;
   color: white;
   letter-spacing: 0.4px;
@@ -545,22 +527,48 @@ footer ul li {
   font-weight: 300;
 }
 
-.landing-header .top-bar,
-.landing-header .top-bar ul,
-.landing-header .title-bar {
+.header-nav {
+  height: $header-nav-height;
+  z-index: 42;
+  position: relative;
+}
+
+.header-nav .menu > li > a {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.header-nav .top-bar {
+  padding-left: 50px;
+  padding-right: 18px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header-nav .top-bar,
+.header-nav .top-bar ul,
+.header-nav .title-bar {
   background-color: transparent;
 }
 
-.landing-header h1 {
-  font-size: 100px;
+.header-nav h1 {
+  font-size: 40px;
   color: #FFFFFF;
-  letter-spacing: 6.5px;
+  // letter-spacing: 6.5px;
   text-shadow: 0 2.5px 0 rgba(0,0,0,0.10);
-  margin: 10px;
-  font-family: 'Just Another Hand', cursive;
+  // margin: 10px;
+  // font-family: 'Just Another Hand', cursive;
 }
 
-.landing-page h1 {
+.header-nav a {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.10);
+  font-weight: 500;
+}
+
+.hero-banner h1 {
   font-size: 64px;
   color: #FFFFFF;
   letter-spacing: 1.5px;
@@ -598,21 +606,20 @@ footer ul li {
 }
 
 .button.download {
-  // background-image: linear-gradient(-175deg, #AA0EFF 0%, #EE1DAD 100%);
-  // border: 1px solid #B71EB5;
   background: #EE1DAD;
   border: 1px solid #EE1DAD;
   box-shadow: 0 2px 0 0 #AE27AC;
+  margin-right: 20px;
   font-size: 16px;
   color: #FFFFFF;
+  letter-spacing: 2px;
   text-align: center;
   text-shadow: 0 1.5px 0 rgba(0,0,0,0.05);
-  margin-right: 20px;
-  letter-spacing: 0.4px;
+  font-weight: 700;
 }
 
 .button.read {
-  border: 1px solid #FFFFFF;
+  border: 1.5px solid #FFFFFF;
   border-radius: 25px;
   background: transparent;
   font-size: 16px;
@@ -620,6 +627,7 @@ footer ul li {
   letter-spacing: 2px;
   text-align: center;
   text-shadow: 0 1.5px 0 rgba(0,0,0,0.05);
+  font-weight: 700;
 }
 
 #mc_embed_signup form {
@@ -666,15 +674,15 @@ footer ul li {
 }
 
 @media screen and (max-width: 1024px) {
-  .landing-page h1 {
+  .hero-banner h1 {
     font-size: 44px;
     line-height: 50px;
   }
-  .landing-page h4 {
+  .hero-banner h4 {
     font-size: 24px;
     line-height: 38px;
   }
-  .landing-page {
+  .hero-banner {
     min-height: 750px;
   }
 }
@@ -697,31 +705,31 @@ footer ul li {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-  .landing-page {
+  .hero-banner {
     min-height: 750px;
   }
-  .landing-page h1 {
+  .hero-banner h1 {
     font-size: 34px;
     line-height: 44px;
   }
-  .landing-page h4 {
+  .hero-banner h4 {
     font-size: 24px;
     line-height: 38px;
   }
-  .landing-header h1 {
+  .header-nav h1 {
     font-size: 60px;
   }
 }
 
 @media screen and (max-width: 430px) {
-  .landing-page {
+  .hero-banner {
     min-height: 630px;
   }
-  .landing-page h1 {
+  .hero-banner h1 {
     font-size: 28px;
     line-height: 34px;
   }
-  .landing-page h4 {
+  .hero-banner h4 {
     font-size: 18px;
     line-height: 28px;
   }
