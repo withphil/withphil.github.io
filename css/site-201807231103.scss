@@ -37,7 +37,6 @@ $header-nav-height: 100px;
 
 body, html {
   font-family: $primary-font;
-  color: $base-font-colour;
 }
 
 button, html [type="button"], [type="reset"], [type="submit"] {
@@ -49,7 +48,7 @@ button, input, optgroup, select, textarea {
 }
 
 code {
-  border-radius: 4px;
+  @include border-radius(4px);
 }
 
 pre.highlight > code {
@@ -64,7 +63,7 @@ pre.highlight > code {
 pre.highlight {
   border: 1px solid #cacaca;
   padding: 10px;
-  border-radius: 4px;
+  @include border-radius(4px);
   background: #e6e6e6;
   margin-bottom: 20px;
 }
@@ -238,7 +237,7 @@ p small {
   min-width: 300px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-radius: 8px;
+  @include border-radius(8px);
   border-color: $border-colour;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
@@ -355,31 +354,36 @@ p small {
 
 footer {
   padding: 80px 0px;
-  border-top-color: $border-colour;
-  border-top-style: solid;
-  border-top-width: 1px;
-  background-color: $footer-base-colour;
-  box-shadow: 0px 1000px 0px 1000px $footer-base-colour;
+  background-image: linear-gradient(-30deg, #7700FF 0%, #546BFE 35%, #3CACFF 72%, #81D8FF 100%, #82D9FF 100%);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 1000px 0px 1000px #3CACFF;
 }
 
 footer .row {
   max-width: 62.5rem;
 }
 
-footer a {
-  color: $footer-base-font-colour;
-  font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-footer a:hover, footer a:focus, footer a:active {
-  color: $footer-link-hover-colour;
-  @include color-ease-out(0.1s);
+footer h1 {
+  font-size: 52px;
+  color: #FFFFFF;
+  letter-spacing: 1.5px;
+  line-height: 70px;
+  text-shadow: 0 2.5px 0 rgba(0,0,0,0.10);
 }
 
 footer h4 {
-  color: $footer-title-font-colour;
+  font-size: 28px;
+  color: white;
+  letter-spacing: 0.4px;
+  line-height: 42px;
+  text-shadow: 0 1.25px 0 rgba(0,0,0,0.1);
+  font-weight: 300;
+}
+
+img.footer {
+  max-height: 90px;
+  margin-bottom: 40px;
 }
 
 .social-button {
@@ -406,35 +410,6 @@ footer ul li {
   list-style-type: none;
 }
 
-/* ====== */
-/* MOBILE */
-/* ====== */
-
-@media screen and (max-width: 640px) {
-  /*home small*/
-  .bg-top .button {
-    margin-top: 40px;
-  }
-  h1 {
-    font-weight: 600;
-    font-size: 32px;
-  }
-  h2 {
-    font-size: 26px;
-  }
-  h3 {
-    font-weight: 600;
-  }
-  .row.banner {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .flat-card {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-
 /* ===== */
 /* STATE */
 /* ===== */
@@ -452,6 +427,22 @@ footer ul li {
 @media screen and (max-width: 720px) {
   .hide-for-small-only-nav {
     display: none !important;
+  }
+}
+
+.show-for-mob {
+  display: none;
+}
+.hide-for-mob {
+  display: block;
+}
+
+@media screen and (max-width: 430px) {
+  .show-for-mob {
+    display: block!important;
+  }
+  .hide-for-mob {
+    display: none!important;
   }
 }
 
@@ -482,7 +473,8 @@ footer ul li {
 }
 
 .button:hover, .button:focus {
-  background-color: #8e2d56;
+  background-color: white;
+  color: #EE1DAD;
 }
 
 .card {
@@ -596,7 +588,7 @@ footer ul li {
   height: 25rem;
   background-image: linear-gradient(-175deg, #AA0EFF 0%, #EE1DAD 100%);
   border: 2px solid #AE27AC;
-  border-radius: 400px;
+  @include border-radius(400px);
   margin: auto;
 }
 
@@ -605,9 +597,9 @@ footer ul li {
   margin-bottom: 25px;
 }
 
-.button.download {
+.button.pink-fill {
   background: #EE1DAD;
-  border: 1px solid #EE1DAD;
+  border: 1px solid #B71EB5;
   box-shadow: 0 2px 0 0 #AE27AC;
   margin-right: 20px;
   font-size: 16px;
@@ -618,9 +610,8 @@ footer ul li {
   font-weight: 700;
 }
 
-.button.read {
+.button.white {
   border: 1.5px solid #FFFFFF;
-  border-radius: 25px;
   background: transparent;
   font-size: 16px;
   color: #FFFFFF;
@@ -632,37 +623,45 @@ footer ul li {
 
 #mc_embed_signup form {
   // text-align: left!important;
+  margin-top: 23px;
 }
 
 #mc_embed_signup input.email {
   display: inline-block;
-  width: 350px;
   margin: auto;
-  height: 45px;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 435px;
+  @include border-radius(30px);
   background-color: white;
   border: transparent;
-  padding-left: 15px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  padding-left: 35px;
   box-shadow: none;
   box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+  font-size: 16px;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-right: 25px;
+  margin-bottom: 40px;
+}
+
+#mc_embed_signup input.email::placeholder,
+#mc_embed_signup input.email:-ms-input-placeholder,
+#mc_embed_signup input.email::-ms-input-placeholder {
+  font-size: 16px;
+  color: #E1E1E1;
+  letter-spacing: 2px;
+  text-transform:capitalize;
+  font-weight: 700;
 }
 
 #mc_embed_signup .clear {
   display: inline-block;
 }
 
-#mc_embed_signup .button.download {
-  margin: auto;
-  height: 45px;
-  box-shadow: 0 3px 0 rgba(0,0,0,0.1);
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  margin-left: -4px;
+#mc_embed_signup .button.pink-fill {
+  height: 51px;
+  margin: 0px;
   margin-top: -1px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .phil {
@@ -682,32 +681,9 @@ footer ul li {
     font-size: 24px;
     line-height: 38px;
   }
-  .hero-banner {
-    min-height: 750px;
-  }
 }
 
 @media screen and (max-width: 540px) {
-  #mc_embed_signup .button.download {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    margin-left: 0px;
-    width: 100%;
-  }
-  #mc_embed_signup .clear {
-    display: block;
-    margin-top: 25px;
-  }
-  #mc_embed_signup input.email {
-    display: block;
-    width: 100%;
-    margin: auto;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  .hero-banner {
-    min-height: 750px;
-  }
   .hero-banner h1 {
     font-size: 34px;
     line-height: 44px;
@@ -722,15 +698,60 @@ footer ul li {
 }
 
 @media screen and (max-width: 430px) {
+  .main-body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .row.banner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .hero-banner {
-    min-height: 630px;
+    padding-top: calc(#{$header-nav-height} + 50px);
+    padding-bottom: 50px;
+    min-height: 560px;
   }
   .hero-banner h1 {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .hero-banner span#main {
+    line-height: 50px;
   }
   .hero-banner h4 {
     font-size: 18px;
+    line-height: 29px;
+  }
+  .button.white {
+    width: 100%;
+    height: 50px;
+  }
+  .button.pink-fill {
+    width: 100%;
+    height: 50px;
+  }
+  #mc_embed_signup input.email {
+    display: block;
+  }
+  .buttons {
+    margin-top: 60px;
+  }
+  .header-nav h1 {
+    font-size: 24px;
+    padding: 8px;
+  }
+  .banner img {
+    max-height: 64px;
+    margin-bottom: 34px;
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: 0.89px;
     line-height: 28px;
+    margin-bottom: 24px;
   }
 }
