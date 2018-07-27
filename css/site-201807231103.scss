@@ -260,12 +260,13 @@ p small {
   height: 0%;
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 69;
   top: 0;
   left: 0;
-  background-color: rgb(255,255,255);
-  background-color: rgba(255,255,255, 0.98);
-  overflow-y: hidden;
+  background-image: linear-gradient(-30deg, #7700FF 0%, #546BFE 35%, #3CACFF 72%, #81D8FF 100%, #82D9FF 100%);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
   transition: 0.5s;
 }
 
@@ -291,16 +292,20 @@ p small {
 .overlay-content {
   position: relative;
   width: 100%;
-  border-top: 1px solid #eceff1;
+  // border-top: 1px solid #eceff1;
 }
 
 .overlay-content .columns {
-  border-bottom: 1px solid #eceff1;
+  // border-bottom: 1px solid #eceff1;
 }
 
 .overlay-sub h3 a {
-  color: rgba(71, 82, 93, 0.8);
-  font-weight: 400;
+  font-size: 24px;
+  color: #FFFFFF;
+  letter-spacing: 0.38px;
+  line-height: 29px;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.10);
+  font-weight: 300;
 }
 
 .overlay a {
@@ -319,11 +324,18 @@ p small {
 
 .overlay .closebtn {
   position: absolute;
-  top: 0%;
-  right: 5%;
-  font-size: 60px;
-  line-height: 60px;
-  color: rgba(0,0,0, 0.9);
+  top: -8px;
+  right: 25px;
+  font-size: 50px;
+  line-height: 50px;
+  color: white;
+  font-weight: 300;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.10);
+}
+
+.overlay .overlay-content {
+  margin-top: 60px;
+  padding-left: 21px;
 }
 
 .is-submenu-item .material-icons {
@@ -563,6 +575,7 @@ footer ul li {
 .header-nav h1 {
   font-size: 40px;
   color: #FFFFFF;
+  margin-bottom: 0px;
   // letter-spacing: 6.5px;
   text-shadow: 0 2.5px 0 rgba(0,0,0,0.10);
   // margin: 10px;
