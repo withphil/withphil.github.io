@@ -138,7 +138,7 @@ p small {
 }
 
 .banner img {
-  max-height: 240px;
+  max-height: 120px;
   vertical-align: middle;
 }
 
@@ -530,7 +530,8 @@ footer ul li {
 
 .hero-banner {
   position: relative;
-  background-image: linear-gradient(-30deg, #7700FF 0%, #546BFE 35%, #3CACFF 72%, #81D8FF 100%, #82D9FF 100%);
+  // background-image: linear-gradient(-30deg, rgb(119,0,255) 0%, rgb(84,107,254) 35%, rgb(60,172,255) 72%, rgb(129,216,255) 100%, rgb(130,217,255) 100%);
+  background: linear-gradient(-30deg, rgba(119,0,255,0.4) 0%, rgba(84,107,254,0.4) 35%, rgba(60,172,255,0.4) 72%, rgba(129,216,255,0.4) 100%, rgba(130,217,255,0.4) 100%), url(/images/pages/hero.jpg);
   overflow: hidden;
   background-size: cover;
   background-position: center;
