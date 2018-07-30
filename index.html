@@ -4,6 +4,55 @@ title: With Phil - Coming Soon
 description: Donate cashlessly with confidence to those sleeping rough.
 ---
 
+<script>
+//
+// $(document).ready(function(){
+//     $("button").click(function(){
+//         $("div").animate({left: '250px'});
+//     });
+// });
+
+// $(document).ready(function(){
+//     $(".scroll").click(function(){
+//       var position = $("#scroll").offset().top;
+//         $("div").animate({
+//           left: '250px'});
+//     });
+// });
+
+$(function() {
+  $(".scroll").on('click', function() {
+    var position = $("#scroll").offset().top;
+    $("HTML, BODY").animate({
+      scrollTop: position
+    },
+    1000,
+    'easeOutExpo'
+    );
+  });
+});
+
+// $(function() {
+//   $(window).scroll(function() {
+//     $('p').each(function(r) {
+//       var scrolled = $(window).scrollTop();
+//       console.log("Scroll Top: " + scrolled);
+//       if (scrolled % 10 == 0) {
+//         console.log("Animate: " + scrolled);
+//         $(this).animate({
+//           top: scrolled + 'px'
+//         },
+//         600,
+//         'easeOutExpo',
+//         function() {
+//         });
+//       }
+//     });
+//   });
+// });
+
+</script>
+
 <div class="page-content">
 
   <div class="hero-banner">
@@ -20,11 +69,11 @@ description: Donate cashlessly with confidence to those sleeping rough.
             <h4>Support people sleeping rough through our cashless donations app. Sign up for early acess below.</h4>
             <div class="buttons hide-for-mob">
               <a href="#" class="button pink-fill" type="button">SIGN ME UP!</a>
-              <a href="#" class="button white" type="button">READ MORE</a>
+              <a href="#readmore" class="button white scroll" type="button">READ MORE</a>
             </div>
             <div class="buttons show-for-mob">
               <a href="#" class="button white" type="button">READ MORE</a>
-              <a href="#" class="button pink-fill" type="button">SIGN ME UP!</a>
+              <a href="#" class="button pink-fill scroll" type="button">SIGN ME UP!</a>
             </div>
           </div>
         </div>
@@ -36,7 +85,7 @@ description: Donate cashlessly with confidence to those sleeping rough.
 
     <div class="row banner align-center">
       <div class="large-10 medium-10 small-11 columns">
-        <div class="row">
+        <div class="row" id="scroll">
           <div class="small-12 columns text-center hide-for-medium">
             <img src="/images/pages/phone.png" alt="Image"></img>
           </div>
