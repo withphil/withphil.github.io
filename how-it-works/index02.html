@@ -1,0 +1,143 @@
+---
+layout: main
+title: With Phil - Coming Soon
+description: Donate cashlessly with confidence to those sleeping rough.
+permalink: /e
+---
+
+<script>
+//
+// $(document).ready(function(){
+//     $("button").click(function(){
+//         $("div").animate({left: '250px'});
+//     });
+// });
+
+// $(document).ready(function(){
+//     $(".scroll").click(function(){
+//       var position = $("#scroll").offset().top;
+//         $("div").animate({
+//           left: '250px'});
+//     });
+// });
+
+$(function() {
+  $(".scroll").on('click', function() {
+    var position = $("#scroll").offset().top;
+    $("HTML, BODY").animate({
+      scrollTop: position
+    },
+    1000,
+    'easeOutExpo'
+    );
+  });
+});
+
+// $(function() {
+//   $(window).scroll(function() {
+//     $('p').each(function(r) {
+//       var scrolled = $(window).scrollTop();
+//       console.log("Scroll Top: " + scrolled);
+//       if (scrolled % 10 == 0) {
+//         console.log("Animate: " + scrolled);
+//         $(this).animate({
+//           top: scrolled + 'px'
+//         },
+//         600,
+//         'easeOutExpo',
+//         function() {
+//         });
+//       }
+//     });
+//   });
+// });
+
+</script>
+
+<div class="page-content">
+
+  <div class="hero-banner home-e">
+    <div class="row align-middle align-center">
+      <div class="large-10 medium-10 small-12 columns">
+        <div class="row align-middle">
+          <div class="large-9 medium-9 small-12 columns">
+            <!-- <h1>Help homeless people<br>
+              <span class="typer" id="main" data-words="raise money. ,pay bills. ,find help. ,find employment. ,buy food." data-colors="white" data-delay="100" data-deleteDelay="2000"></span>&nbsp;
+            </h1> -->
+            <h1>Help the homeless <br> With Phil</h1>
+          </div>
+          <div class="large-7 medium-7 small-12 columns">
+            <h4>Phil is a cashless donations app that lets you donate food and shelter from your phone.</h4>
+            <div class="buttons hide-for-mob">
+              <a href="#" class="button pink-fill" type="button">SIGN ME UP!</a>
+              <a href="#readmore" class="button white scroll" type="button">READ MORE</a>
+            </div>
+            <div class="buttons show-for-mob">
+              <a href="#" class="button white" type="button">READ MORE</a>
+              <a href="#" class="button pink-fill scroll" type="button">SIGN ME UP!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-body">
+
+    <div class="row banner align-center">
+      <div class="large-10 medium-10 small-11 columns">
+        <div class="row" id="scroll">
+          <div class="small-12 columns text-center hide-for-medium">
+            <img src="/images/pages/phone.png" alt="Image"></img>
+          </div>
+          <div class="large-4 medium-4 small-4 columns text-center show hide-for-small-only">
+            <img src="/images/pages/phone.png" alt="Image"></img>
+          </div>
+          <div class="large-8 medium-8 small-12 columns">
+            <h2>Donate money easily</h2>
+            <p>With Phil, you can give food or shelter to people sleeping rough nearby without the worry of carrying change.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row banner align-center">
+      <div class="large-10 medium-10 small-11 columns">
+        <div class="row">
+          <div class="small-12 columns text-center hide-for-medium">
+            <img src="/images/pages/basket.png" alt="Image"></img>
+          </div>
+          <div class="large-4 medium-4 small-4 columns text-center show hide-for-small-only">
+            <img src="/images/pages/basket.png" alt="Image"></img>
+          </div>
+          <div class="large-8 medium-8 small-12 columns">
+            <h2>Discover who you donate to</h2>
+            <p>Find out about the lives and stories of the individuals you're supporting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row banner align-center">
+      <div class="large-10 medium-10 small-11 columns">
+        <div class="row">
+          <div class="small-12 columns text-center hide-for-medium">
+            <img src="/images/pages/support.png" alt="Image"></img>
+          </div>
+          <div class="large-4 medium-4 small-4 columns text-center show hide-for-small-only">
+            <img src="/images/pages/support.png" alt="Image"></img>
+          </div>
+          <div class="large-8 medium-8 small-12 columns">
+            <h2>Raise awareness of homelessness</h2>
+            <p>Share your gifting on social media and get your friends to help the homeless With Phil.</p>
+            <div class="text-center medium-text-left">
+              <a href="/how-it-works" class="button">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
