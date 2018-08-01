@@ -1,6 +1,24 @@
 ---
 layout: default
 ---
+
+<script>
+$(document).ready(function(){
+  $(".readmore").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#readmore").offset().top
+    }, 600);
+  });
+
+  $(".signup").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#signup").offset().top
+    }, 600);
+  });
+});
+</script>
+
+
 <div class="header-nav" data-sticky-container>
   <!-- <div id="sticky-header" class="sticky" data-sticky data-options="anchor: page; stickyOn: small; marginTop: 0;"> -->
   <div>
@@ -27,7 +45,7 @@ layout: default
         <ul class="dropdown menu" data-dropdown-menu data-options="disableHover:true;clickOpen:true">
           <li><a href="/">HOME</a></li>
           <li><a href="/how-it-works/">HOW IT WORKS</a></li>
-          <li><a href="#">SIGN UP</a></li>
+          <li><a class="signup">SIGN UP</a></li>
         </ul>
       </div>
     </div>
@@ -49,7 +67,7 @@ layout: default
           <span class="overlay-sub">
             <h3><a href="/">Home</a></h3>
             <h3><a href="/how-it-works/">How it works</a></h3>
-            <h3><a href="#">Sign up</a></h3>
+            <h3><a class="signup" onclick="closeNav()">Sign up</a></h3>
           </span>
         </div>
       </div>

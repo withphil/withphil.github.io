@@ -5,55 +5,7 @@ description: Donate cashlessly with confidence to those sleeping rough.
 ---
 
 <script>
-//
-// $(document).ready(function(){
-//     $("button").click(function(){
-//         $("div").animate({left: '250px'});
-//     });
-// });
 
-// $(document).ready(function(){
-//     $(".scroll").click(function(){
-//       var position = $("#scroll").offset().top;
-//         $("div").animate({
-//           left: '250px'});
-//     });
-// });
-
-$(function() {
-  $(".scroll").on('click', function() {
-    var position = $("#scroll").offset().top;
-    $("HTML, BODY").animate({
-      scrollTop: position
-    },
-    1000,
-    'easeOutExpo'
-    );
-  });
-});
-
-// $(function() {
-//   $(window).scroll(function() {
-//     $('p').each(function(r) {
-//       var scrolled = $(window).scrollTop();
-//       console.log("Scroll Top: " + scrolled);
-//       if (scrolled % 10 == 0) {
-//         console.log("Animate: " + scrolled);
-//         $(this).animate({
-//           top: scrolled + 'px'
-//         },
-//         600,
-//         'easeOutExpo',
-//         function() {
-//         });
-//       }
-//     });
-//   });
-// });
-
-</script>
-
-<script>
 function gifbg() {
    var imgCount = 4;
    var randomCount = (Math.floor(Math.random() * imgCount));
@@ -65,7 +17,7 @@ function gifbg() {
    document.getElementById('banner').setAttribute("style", images[randomCount] );
 }
 $(document).ready(function(){
-    gifbg();
+  gifbg();
 });
 </script>
 
@@ -84,12 +36,12 @@ $(document).ready(function(){
           <div class="large-7 medium-7 small-12 columns">
             <h4>Phil is a cashless donations app that lets you donate food and shelter from your phone.</h4>
             <div class="buttons hide-for-mob">
-              <a href="#" class="button pink-fill" type="button">SIGN ME UP!</a>
-              <a href="#readmore" class="button white scroll" type="button">READ MORE</a>
+              <a class="button pink-fill signup" type="button">SIGN ME UP!</a>
+              <a class="button white scroll readmore" type="button">READ MORE</a>
             </div>
             <div class="buttons show-for-mob">
-              <a href="#" class="button white" type="button">READ MORE</a>
-              <a href="#" class="button pink-fill scroll" type="button">SIGN ME UP!</a>
+              <a class="button white readmore" type="button">READ MORE</a>
+              <a class="button pink-fill signup" type="button">SIGN ME UP!</a>
             </div>
           </div>
         </div>
@@ -99,9 +51,9 @@ $(document).ready(function(){
 
   <div class="main-body">
 
-    <div class="row banner align-center">
+    <div class="row banner align-center" id="readmore">
       <div class="large-10 medium-10 small-11 columns">
-        <div class="row" id="scroll">
+        <div class="row">
           <div class="small-12 columns text-center hide-for-medium">
             <img src="/images/pages/phone.png" alt="Image"></img>
           </div>
