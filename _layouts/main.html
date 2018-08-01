@@ -1,44 +1,52 @@
 ---
 layout: default
 ---
-<div class="landing-header" data-sticky-container>
+
+<script>
+$(document).ready(function(){
+  $(".readmore").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#readmore").offset().top
+    }, 600);
+  });
+
+  $(".signup").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#signup").offset().top
+    }, 600);
+  });
+});
+</script>
+
+
+<div class="header-nav" data-sticky-container>
   <!-- <div id="sticky-header" class="sticky" data-sticky data-options="anchor: page; stickyOn: small; marginTop: 0;"> -->
   <div>
     <div class="title-bar hide-for-medium-nav">
       <div class="title-bar-title">
-        <!-- <div class="logo">
-          <a href="/"><img src="/images/logo/soup.png"></a>
-        </div> -->
-        <!-- <h1>Phil</h1> -->
+        <div class="logo">
+          <a href="/"><img src="/images/logo/white-logo.svg"></a>
+        </div>
       </div>
-      <!-- <button class="menu-icon dark" type="button" onclick="openNav()"></button> -->
+      <button class="menu-icon" type="button" onclick="openNav()"></button>
     </div>
 
     <div class="top-bar hide-for-small-only-nav">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu data-options="disableHover:true;clickOpen:true">
-          <li class="menu-text">
-            <!-- <div class="logo">
-              <a href="/"><img src="/images/logo/soup.png"></a>
-            </div> -->
-            <!-- <h1>Phil</h1> -->
+          <li>
+            <div class="logo">
+              <a href="/"><img src="/images/logo/white-logo.svg"></a>
+            </div>
           </li>
         </ul>
       </div>
       <div id="nav-menu" class="top-bar-right hide-for-small-only-nav invisible-man">
-        <!-- <ul class="dropdown menu" data-dropdown-menu data-options="disableHover:true;clickOpen:true">
-          <li>
-            <a title="MIMO Splash Pages and Email Marketing Tools" href="#">Product &#9662;</a>
-            <ul class="menu">
-              <li><a id="product" href="/product/">Core Features</a></li>
-              <li><a id="gdpr" href="/gdpr-features/">GDPR Compliance</a></li>
-              <li><a id="manufacturers" href="/community-edition/">Community Edition</a></li>
-              <li><a id="product" href="/integrations/">Integrations</a></li>
-            </ul>
-          </li>
-          <li><a title="MIMO Splash Pages and Email Marketing" href="/plans">Pricing</a></li>
-          <li><a title="MIMO Social Logins and Email Marketing" class="button register-button" href="/join">Register</a></li>
-        </ul> -->
+        <ul class="dropdown menu" data-dropdown-menu data-options="disableHover:true;clickOpen:true">
+          <li><a href="/">HOME</a></li>
+          <!-- <li><a href="/how-it-works/">HOW IT WORKS</a></li> -->
+          <li><a class="signup">SIGN UP</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -46,36 +54,26 @@ layout: default
 
 <main>
   <div id="navTray" class="overlay">
-    <div class="title-bar hide-for-medium-nav">
+    <!-- <div class="title-bar hide-for-medium-nav">
       <div class="title-bar-title">
-        <!-- <div class="logo">
-          <a href="/"><img src="/images/logo/soup.png"></a>
-        </div> -->
-        <!-- <h1>Phil</h1> -->
+        <h1>With Phil</h1>
       </div>
-      <a class="closebtn" onclick="closeNav()">&times;</a>
-    </div>
+    </div> -->
+    <a class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
       <div class="row">
         <div class="small-12 columns">
-          <h2>Product</h2>
+          <!-- <h2>Product</h2> -->
           <span class="overlay-sub">
-            <h3><a href="/product/">Core Features</a></h3>
-            <h3><a href="/gdpr-features/">GDPR Compliance</a></h3>
-            <h3><a href="/community-edition/">Community Edition</a></h3>
-            <h3><a href="/integrations/">Integrations</a></h3>
+            <h3><a href="/">Home</a></h3>
+            <!-- <h3><a href="/how-it-works/">How it works</a></h3> -->
+            <h3><a class="signup" onclick="closeNav()">Sign up</a></h3>
           </span>
-        </div>
-        <div class="small-12 columns">
-          <h2><a href="/plans">Pricing</a></h2>
-        </div>
-        <div class="small-12 columns">
-          <h2><a class="register-button" href="/join">Register</a></h2>
         </div>
       </div>
     </div>
   </div>
 
   {{ content }}
-  <!-- {% include footer.html %} -->
+  {% include footer.html %}
 </main>

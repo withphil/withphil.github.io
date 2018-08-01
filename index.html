@@ -4,43 +4,95 @@ title: With Phil - Coming Soon
 description: Donate cashlessly with confidence to those sleeping rough.
 ---
 
-<div class="landing-page">
-  <div class="landing-content row banner align-middle align-center">
-    <div class="large-10 medium-10 columns">
-      <div class="row align-middle">
-        <div class="large-9 columns">
-          <h1>With <span class="phil">Phil</span>, you help homeless people<br>
-            <span class="typer" id="main" data-words="raise money. ,pay bills. ,find help. ,find employment. ,buy food." data-colors="white" data-delay="100" data-deleteDelay="2000"></span>&nbsp;
-            <!-- <span class="cursor" data-owner="main"></span> -->
-          </h1>
-        </div>
-        <div class="large-10 columns">
-          <h4>Help people sleeping rough through our cashless donations app. </br>Get notified when we launch by signing up below.</h4>
-          <div class="buttons">
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-              <form action="https://withphil.us18.list-manage.com/subscribe/post?u=7207033fd93227a284b0ebe60&amp;id=0365fc9f40" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="b_7207033fd93227a284b0ebe60_0365fc9f40" tabindex="-1" value="">
-                  </div>
-                  <div class="clear">
-                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button download">
-                  </div>
-                </div>
-              </form>
-            </div>
+<script>
 
-            <!--End mc_embed_signup-->
+function gifbg() {
+   var imgCount = 4;
+   var randomCount = (Math.floor(Math.random() * imgCount));
+   var images = [
+     'background: linear-gradient(-30deg, rgba(119,0,255,0.4) 0%, rgba(84,107,254,0.4) 35%, rgba(60,172,255,0.4) 72%, rgba(129,216,255,0.4) 100%, rgba(130,217,255,0.4) 100%), url(/images/pages/hero-1.jpg);background-position: center;background-size: cover;',
+     'background: linear-gradient(-30deg, rgba(119,0,255,0.4) 0%, rgba(84,107,254,0.4) 35%, rgba(60,172,255,0.4) 72%, rgba(129,216,255,0.4) 100%, rgba(130,217,255,0.4) 100%), url(/images/pages/hero-2.jpg);background-position: center;background-size: cover;',
+     'background: linear-gradient(-30deg, rgba(119,0,255,0.4) 0%, rgba(84,107,254,0.4) 35%, rgba(60,172,255,0.4) 72%, rgba(129,216,255,0.4) 100%, rgba(130,217,255,0.4) 100%), url(/images/pages/hero-3.jpg);background-position: center;background-size: cover;',
+     'background: url(/images/pages/hero-4.jpg);background-position: center;background-size: cover;'];
+   document.getElementById('banner').setAttribute("style", images[randomCount] );
+}
+$(document).ready(function(){
+  gifbg();
+});
+</script>
 
+<div class="page-content">
+
+  <div id="banner" class="hero-banner home">
+    <div class="row align-middle align-center">
+      <div class="large-10 medium-10 small-12 columns">
+        <div class="row align-middle">
+          <div class="large-9 medium-9 small-12 columns">
+            <!-- <h1>Help homeless people<br>
+              <span class="typer" id="main" data-words="raise money. ,pay bills. ,find help. ,find employment. ,buy food." data-colors="white" data-delay="100" data-deleteDelay="2000"></span>&nbsp;
+            </h1> -->
+            <h1>Help the Homeless, <br> With Phil</h1>
           </div>
-          <h4 style="font-size:18px;">Coming soon to London.</h4>
+          <div class="large-7 medium-7 small-12 columns">
+            <h4>Cashless donations from the comfort of your phone.</h4>
+            <div class="buttons hide-for-mob">
+              <a class="button pink-fill signup" type="button">SIGN ME UP!</a>
+              <a class="button white scroll readmore" type="button">READ MORE</a>
+            </div>
+            <div class="buttons show-for-mob">
+              <a class="button white readmore" type="button">READ MORE</a>
+              <a class="button pink-fill signup" type="button">SIGN ME UP!</a>
+            </div>
+          </div>
         </div>
-        <!-- <div class="large-5 show-for-large columns text-center">
-        </div> -->
       </div>
     </div>
   </div>
 
+  <div class="main-body">
+
+    <div class="row align-center" id="readmore">
+      <div class="large-10 medium-10 small-12 columns">
+        <div class="row">
+          <div class="large-4 medium-4 small-12 columns">
+            <img style="position: relative;top: 50%;transform: translateY(-50%);"src="/images/pages/app.png" alt="Image"></img>
+          </div>
+          <div class="large-8 medium-8 small-12 columns">
+            <div class="row banner">
+              <div class="large-12 medium-12 small-12 columns">
+                <h2>Local Discovery</h2>
+                <p>Discover people in need while walking around your city with your phone.</p>
+              </div>
+            </div>
+            <div class="row banner">
+              <div class="large-12 medium-12 small-12 columns">
+                <h2>Discover Their Story</h2>
+                <p>Learn about people's lives, backstories and future hopes, so you know who you're donating to.</p>
+              </div>
+            </div>
+            <div class="row banner">
+              <div class="large-12 medium-12 small-12 columns">
+                <h2>Cashless Donations</h2>
+                <p>100% of your donations get to the people in need. Donations are redeemable at selected retailers and partners.</p>
+              </div>
+            </div>
+            <!-- <div class="row banner">
+              <div class="large-12 medium-12 small-12 columns">
+                <h2>Raise awareness of homelessness</h2>
+                <p>Share your gifting on social media and get your friends to help the homeless With Phil.</p>
+                <div class="text-center medium-text-left">
+                  <a href="/how-it-works" class="button">LEARN MORE</a>
+                </div>
+              </div>
+
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
+
