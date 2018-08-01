@@ -22,7 +22,7 @@ function closeNav() {
   document.getElementById("navTray").style.height = "0%";
 }
 
-console.log("%cWelcome to the jungle, what's going on pal?", "font-size: x-large")
+console.log("%cHelp the Homeless With Phil!", "font-size: x-large")
 
 function isEmail(email) {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
