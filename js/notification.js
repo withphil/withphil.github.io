@@ -1,6 +1,6 @@
-// $(document).ready(function(){
-//     checkCookie();
-// });
+$(document).ready(function(){
+    checkCookie();
+});
 
 $('#close').click(function () {
     $('#notification').css('display','none');
