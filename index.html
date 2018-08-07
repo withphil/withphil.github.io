@@ -4,17 +4,29 @@ title: With Phil
 description: Donate cashlessly with confidence to those sleeping rough.
 ---
 
-<div class="landing-page">
+<script>
+
+function gifbg() {
+ var imgCount = 4;
+ var randomCount = (Math.floor(Math.random() * imgCount));
+ var images = [
+   'background: linear-gradient(-30deg, rgba(119,0,255,0.6) 0%, rgba(84,107,254,0.6) 35%, rgba(60,172,255,0.6) 72%, rgba(129,216,255,0.6) 100%, rgba(130,217,255,0.6) 100%), url(/images/pages/hero-1.jpg);background-position: center;background-size: cover;',
+   'background: linear-gradient(-30deg, rgba(119,0,255,0.6) 0%, rgba(84,107,254,0.6) 35%, rgba(60,172,255,0.6) 72%, rgba(129,216,255,0.6) 100%, rgba(130,217,255,0.6) 100%), url(/images/pages/hero-2.jpg);background-position: center;background-size: cover;',
+   'background: linear-gradient(-30deg, rgba(119,0,255,0.4) 0%, rgba(84,107,254,0.4) 35%, rgba(60,172,255,0.4) 72%, rgba(129,216,255,0.4) 100%, rgba(130,217,255,0.4) 100%), url(/images/pages/hero-3.jpg);background-position: center;background-size: cover;',
+   'background: url(/images/pages/hero-4.jpg);background-position: center;background-size: cover;'];
+ document.getElementById('banner').setAttribute("style", images[randomCount] );
+}
+$(document).ready(function(){
+gifbg();
+});
+</script>
+
+<div id="banner" class="landing-page">
   <div class="landing-content row banner align-middle align-center">
     <div class="large-10 columns">
       <div class="row align-middle">
-        <div class="large-9 columns text-center large-text-left">
-          <h1>With Phil, you help homeless people<br>
-            <span class="typer" id="main" data-words="raise money,pay bills,find help,find employment,buy food" data-colors="white" data-delay="100" data-deleteDelay="2000"></span>&nbsp;
-            <!-- <span class="cursor" data-owner="main"></span> -->
-          </h1>
-          <h4 style="font-weight: 400">Donate cashlessly - help people sleeping rough.</h4>
-          <h4 style="font-weight: 400">Subscribe to our newsletter below to stay in the loop.</h4>
+        <div class="large-9 columns large-text-left">
+          <h1>Help The Homeless With Phil</h1>
           <div class="buttons">
             <!-- Begin MailChimp Signup Form -->
             <div id="mc_embed_signup">
