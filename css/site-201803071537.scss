@@ -60,7 +60,7 @@ pre.highlight {
   margin-bottom: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
   font-family: $primary-font;
   font-weight: 600;
 }
@@ -703,3 +703,20 @@ footer ul li {
     line-height: 28px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .hero-banner h4 {
+      font-size: 24px;
+      line-height: 38px;
+  }
+}
+
+.hero-banner h4 {
+  font-size: 28px;
+  color: white;
+  letter-spacing: 0.4px;
+  line-height: 42px;
+  text-shadow: 0 1.25px 0 rgba(0,0,0,0.1);
+  font-weight: 300;
+}
+
